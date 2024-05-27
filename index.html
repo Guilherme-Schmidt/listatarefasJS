@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Lista de tarefas</title>
+    <title>Minha Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h2>Lista de tarefas</h2>
+
+<div class="header">
+    <h2>Lista de Tarefas</h2>
+</div>
+
+<div class="container">
+    <div class="task-input">
+       
         <input type="text" id="tarefa" placeholder="Informe a tarefa">
-        <span onclick="addElemento()" class="addBtn">Incluir</span>
-        <span onclick="clearList()" class="clrBtn">Limpar Lista</span>
+        <input type="date" id="data" placeholder="Selecione a data">
+        <select id="categoria">
+            <option value="Trabalho">Trabalho</option>
+            <option value="Pessoal">Pessoal</option>
+            <option value="Outros">Outros</option>
+        </select>
     </div>
+    
+    <div class="btn-container">
+        <button class="addBtn" onclick="addElemento()">Adicionar</button>
+        <button class="clrBtn" onclick="clearList()">Limpar Lista</button>
+    </div>
+</div>
 
-    <ul id="itemLista">
-        <li class="checked">Tomar café</li>
-        <li>Fazer compras</li>
-        <li>Entregar atividade no moodle</li>
-    </ul>
+<ul id="itemLista">
+    <li class="checked">Tomar café</li>
+    <li>Fazer compras</li>
+    <li>Entregar atividade no moodle</li>
+</ul>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
